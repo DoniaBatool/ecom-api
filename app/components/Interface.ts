@@ -1,4 +1,4 @@
- export interface CakeItem {
+export interface CakeItem {
     selectedWeight?: number;
     id: string;
     image: string[];

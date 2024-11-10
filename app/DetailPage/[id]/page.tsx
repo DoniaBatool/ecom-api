@@ -46,7 +46,7 @@ const DetailPage = ({ params }: { params: { id: string } }) => {
             const newItem = {
                 id: cake.id,
                 title: cake.title,
-                image: cake.image[0],
+                image: selectedImage || cake.image[0],
                 quantity: quantity,
                 weight: cake.weight,
                 price: cake.price,

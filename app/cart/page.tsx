@@ -204,18 +204,18 @@ const CartPage = () => {
                     <div className="bg-white rounded-lg p-6 shadow-xl w-11/12 max-w-sm sm:max-w-md">
                         <h2 className="text-xl font-semibold mb-4">Confirm Order</h2>
                         <p className="text-gray-700">Are you sure you want to confirm your order?</p>
-                        <div className="mt-6 flex justify-end gap-4">
-                            <button 
-                                onClick={() => setShowConfirmation(false)} 
-                                className="bg-gray-300 text-gray-700 font-medium px-4 py-2 rounded-md shadow-sm transition hover:bg-gray-400"
-                            >
-                                Cancel
-                            </button>
+                        <div className="mt-4 flex justify-between">
                             <button 
                                 onClick={handleConfirm} 
-                                className="bg-myRed text-white font-medium px-4 py-2 rounded-md shadow-sm transition hover:bg-gray-600"
+                                className="bg-myRed hover:bg-gray-600 text-white font-semibold px-4 py-2 rounded-md"
                             >
-                                Confirm
+                                Yes
+                            </button>
+                            <button 
+                                onClick={() => setShowConfirmation(false)} 
+                                className="bg-gray-300 hover:bg-gray-400 text-gray-700 font-semibold px-4 py-2 rounded-md"
+                            >
+                                No
                             </button>
                         </div>
                     </div>

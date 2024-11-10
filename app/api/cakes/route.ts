@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import { CakeItem } from "@/app/components/Interface";
 
-export const cakes: CakeItem[] = [
+
+export async function GET (){
+const cakes: CakeItem[] = [
     {
         id: "1c",
         image: ["/chococake.png", "/choco2.jpg", "/choco3.jpg"],
@@ -63,7 +65,5 @@ export const cakes: CakeItem[] = [
         selectedWeight: 1 // Add selectedWeight here
     }
 ];
-
-export async function GET() {
-    return NextResponse.json(cakes);
+return NextResponse.json(cakes);
 }
