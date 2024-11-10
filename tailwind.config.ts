@@ -11,9 +11,20 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        myRed: "#772424",
+      },
+      keyframes: {
+        'spin-pause': {
+          '0%, 90%': { transform: 'rotate(0deg)' },  // No rotation for the first 90% of the 10s
+          '100%': { transform: 'rotate(360deg)' },   // Spin at the end
+        },
+      },
+      animation: {
+        'spin-5s': 'spin-pause 5s linear infinite',  // 5-second duration with infinite repeats
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
+
 export default config;
